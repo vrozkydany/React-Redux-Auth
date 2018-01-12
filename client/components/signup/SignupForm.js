@@ -74,7 +74,7 @@ export default class SignupForm extends React.Component{
         })
         .catch(
           (error) => 
-            this.setState({errors: error, isLoading: true})
+            this.setState({errors: error.response.data, isLoading: true})
       );
     }
     
