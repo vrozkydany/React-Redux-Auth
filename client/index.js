@@ -12,6 +12,7 @@ import rootReducer from "./rootReducer";
 import setAuthorizationToken from "./utils/setAuthorizationToken";
 import jwt from "jsonwebtoken";
 import { setCurrentUser } from "./actions/authActions";
+import NewEventPage from "./components/events/NewEventPage";
 
 const store = createStore(
   rootReducer,
@@ -34,6 +35,7 @@ render(
           <Route exact path="/" component={Greatings} />
           <Route path="/signup" component={SignupPage} />
           <Route path="/login" component={LoginPage} />
+          <Route path="/new-event" component={NewEventPage} />
         </App>
       </BrowserRouter>
     </Provider>  
